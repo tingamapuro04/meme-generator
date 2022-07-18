@@ -29,7 +29,7 @@ body {
   margin-right: auto;
 }
 
-form {
+.form {
   padding: 4%;
 }
 
@@ -46,4 +46,8 @@ input {
   color: white;
   border: none;
   cursor: pointer;
+}
+
+.abi {
+  max-width: 100%;
 }
