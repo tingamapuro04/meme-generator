@@ -14,7 +14,7 @@ function On({on, ff, mobutu}) {
   }
   return (
     <div>
-      <div style={styles} className="waja" onClick={() => mobutu(ff)} >{ff}</div>
+      <div style={styles} className="waja" onClick={handleClick} >{ff}</div>
     </div>
   )
 }

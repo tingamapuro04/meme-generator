@@ -15,12 +15,9 @@ function App() {
   const [first, setFirst] = useState(troon);
 
 
-const toggle = (ff) => {
-  console.log(ff)
-}
 
   const elements = first.map(item => (
-    <On on={item.on} key={item.id} ff={item.id} mobutu={toggle} />
+    <On on={item.on} key={item.id} ff={item.id} />
     ))
   return (
     <div className="App">
