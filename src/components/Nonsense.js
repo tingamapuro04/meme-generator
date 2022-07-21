@@ -1,24 +1,15 @@
-import { useState } from "react";
-import React from 'react'
+import React, { useState } from 'react'
 
-function Nonsense() {
-  const [list, setList] = useState({
-    firstName: "Adoyo",
-    secondName: "Alphonce",
-    isFavourite: true
-  })
-
-  // const abuso = () => {
-  //   setList(prev => [...prev, Math.floor(Math.random()*prev.length)])
-  // }
-
-  // const all =list.map(item => <p>{item}</p>)
-  let setTrue = list.isFavourite ? "True" : "False"
-
+function Nonsense({setup, punchline}) {
+  const [isShown, setIsShown] = useState(false);
+  const wee = () => {
+    setIsShown(prev => !prev)
+  }
   return (
     <div>
-      <button>iiii</button>
-      <div>{setTrue}</div>
+      {!isShown && <p>{setup}</p>}
+      <p>punchline</p>
+      <button onClick={wee}>{isShown ? "Hide" : "Show"}</button>
     </div>
   )
 }

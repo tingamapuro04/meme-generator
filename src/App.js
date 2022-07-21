@@ -24,6 +24,7 @@ function App() {
       <Header />
       <Form />
       {elements}
+      <Nonsense setup={'mobutu'} punchline={'diego'} />
     </div>
   );
 }
