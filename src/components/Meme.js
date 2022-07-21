@@ -1,15 +1,26 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import dataC from './memedata';
 
 function Meme() {
 
   const [url, setUrl] = useState('')
+  const [Data, setData] = useState([])
 
   function addUrl () {
-    const num = Math.floor(Math.random()* dataC.data.memes.length);
-    const picked = dataC.data.memes[num].url;
+    const num = Math.floor(Math.random()* Data.length);
+    const picked = Data[num].url;
     setUrl(picked)
   }
+
+  useEffect(() => {
+    async function getData () {
+      const res = await fetch(`https://api.imgflip.com/get_memes`)
+      const data1 = await res.json()
+      setData(data1.data.memes)
+    }
+    getData()
+
+  }, [])
 
 
 
