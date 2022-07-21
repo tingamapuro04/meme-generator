@@ -5,7 +5,8 @@ import Header from './components/Header';
 import Nonsense from './components/Nonsense';
 import troon from './components/Box'
 import On from './components/On';
-import Tems from './components/Tems';
+import Over from './components/Over';
+import Api from './components/Api';
 
 function App() {
 
@@ -26,7 +27,8 @@ function App() {
       <Form />
       {elements}
       <Nonsense setup={'mobutu'} punchline={'diego'} />
-      <Tems />
+      <Over />
+      <Api />
     </div>
   );
 }

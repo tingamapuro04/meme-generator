@@ -25,6 +25,9 @@ body {
 
 .img {
   margin: 1% 2%;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .para1 {
@@ -53,6 +56,29 @@ input {
 .abi {
   max-width: 100%;
   height: 100%;
+}
+
+.Akwaba {
+  position: absolute;
+  top: 1%;
+  left: 25%;
+  font-size: 3rem;
+  font-family: fantasy, sans-serif;
+  color: white;
+  font-weight: 700;
+  text-align: center;
+}
+
+.Akwaba1 {
+  position: absolute;
+  top: 90%;
+  left: 25%;
+  font-size: 3rem;
+  font-family: fantasy, sans-serif;
+  color: white;
+  font-weight: 700;
+  text-align: center;
+
 }
 
 .second-Con {

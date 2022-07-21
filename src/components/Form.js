@@ -8,11 +8,6 @@ function Form() {
 
   const [url, setUrl] = useState('')
 
-  function addUrl () {
-    // const num = Math.floor(Math.random()* dataC.data.memes.length);
-    // const picked = dataC.data.memes[num].url;
-    // setUrl(picked)
-  }
 
   const [meme, setMeme] = useState({
     top: '',
@@ -31,18 +26,28 @@ function Form() {
     }))
   }
 
+  const handleChange = (e) => {
+    const {name, value} = e.target;
+    setMeme(prev => ({
+      ...prev,
+      [name]: value
+    }))
+  }
+
 
 
   return (
     <div className="second-Con">
       <div className="form">
-        <input type="text" placeholder="shut" />
-        <input type="text" placeholder="and take the money" />
+        <input type="text" placeholder="shut" name="top" value={meme.top} onChange={handleChange} />
+        <input type="text" placeholder="and take the money" name="bottom" value={meme.bottom} onChange={handleChange} />
         <button onClick={AddMeme} className="btn">Pick a meme</button>
         <br />
       </div>
       <div className="img">
         <img src={meme.Url} alt='' className="abi" />
+        <p className='Akwaba'> {meme.top} </p>
+        <p className='Akwaba1'> {meme.bottom} </p>
       </div>
     </div>
   )
